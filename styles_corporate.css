@@ -1,0 +1,43 @@
+/* Watermark Overlay */
+body::before {
+    content: ""; position: fixed; inset: 0; z-index: 9999; pointer-events: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300'><text x='50%' y='50%' font-size='14' font-family='Arial' fill='rgba(0,0,0,0.06)' text-anchor='middle' transform='rotate(-30, 200, 150)'>GAGAN LIC PREVIEW</text></svg>");
+    background-repeat: repeat;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+
+.navbar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.5rem 8%; background: #002347; color: white; border-bottom: 4px solid #ffcc00;
+}
+
+.logo span { color: #ffcc00; font-weight: 800; }
+
+.hero {
+    height: 80vh; background: #002347; color: white;
+    display: flex; align-items: center; padding: 0 8%;
+    border-bottom: 10px solid #ffcc00;
+}
+
+.hero-content h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; }
+
+.btn {
+    background: #ffcc00; color: #002347; padding: 15px 40px;
+    text-decoration: none; font-weight: bold; text-transform: uppercase;
+    transition: 0.3s; display: inline-block;
+}
+
+.services { padding: 80px 8%; background: #f9f9f9; }
+.card-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+
+.card {
+    background: white; padding: 40px; border: 1px solid #ddd;
+    transition: 0.3s; text-align: left;
+}
+.card:hover { border-color: #ffcc00; transform: translateY(-5px); }
+.card i { font-size: 2rem; color: #002347; margin-bottom: 20px; }
+
+.contact { padding: 80px 8%; background: #fff; }
+.contact-box { max-width: 500px; border: 5px solid #002347; padding: 30px; }
+input, select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; }
